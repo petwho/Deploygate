@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DeployGateSDK/DeployGateSDK.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[DeployGateSDK sharedInstance] launchApplicationWithAuthor:@"YOUR_USER_NAME" key:@"[target_application_api_key]"];
     return YES;
 }
 
